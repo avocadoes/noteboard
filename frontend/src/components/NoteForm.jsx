@@ -15,14 +15,15 @@ function NoteForm() {
     }
     return (
         <section className='form'>
-            <form onSubmit={onSubmit}>
+            <form className='input' onSubmit={onSubmit}>
                 <div className='form-group'>
-                    <label htmlFor='text'>Note</label>
-                    <input 
+                    <textarea 
                         type='text'
                         name='text'
                         id='text'
-                        value={text} 
+                        value={text}
+                        rows='8'
+                        placeholder='Write a note...'
                         onChange={(e) => setText(e.target.value)}
                     />
                 </div>

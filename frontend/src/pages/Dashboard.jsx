@@ -32,21 +32,18 @@ function Dashboard() {
 
   return (
     <div>
-      <section className='heading'>
-        <h1>{user && user.name}'s notes</h1>
-      </section>
-
-      <NoteForm />
-
+      
       <section className='content'>
+        <NoteForm />
         { notes.length > 0 ? (
           <div className='notes'>
+            
             {notes.map((note) => (
               <NoteItem key={note._id} note={note} />
             ))}
           </div>
         ) : (
-          <h3>You have not saved any notes</h3>
+          <h3>You have no saved notes.</h3>
         ) }
       </section>
     </div>

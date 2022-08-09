@@ -19,6 +19,7 @@ function Header() {
         <div className='logo'>
             <Link to='/'>NoteBoard</Link>
         </div>
+        <h2>{user ? user.name + "'s notes": ""}</h2>
         <ul>
             {user ? (
                 <li>
