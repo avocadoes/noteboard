@@ -216,7 +216,7 @@ margin: 0 auto;
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   * {
     color: black;
     background-color: white;
