@@ -45,12 +45,32 @@ h1 {
   text-align: center;
 }
 
+.box {
+  padding: 64px;
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+.box p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding-bottom: 48px;
+}
+
+.link {
+  margin-bottom: 16px;
+}
+
+.link * {
+  color: royalblue;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  border-bottom: 1px solid #e6e6e6;
   margin-bottom: 60px;
 }
 
@@ -109,8 +129,13 @@ h1 {
 }
 
 .form {
-width: 40%;
+width: 80%;
 margin: 0 auto;
+}
+
+.noteform {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .content {
@@ -128,7 +153,7 @@ margin: 0 auto;
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #bababa;
   border-radius: 5px;
   margin-bottom: 10px;
   font-family: inherit;
@@ -211,15 +236,15 @@ margin: 0 auto;
   .note {
     grid-column: 1;
   }
-  .form {
-    width: 50%;
-  }
 }
 
 @media (prefers-color-scheme: light) {
   * {
     color: black;
     background-color: white;
+  }
+  .box, .box * {
+    background-color: #f7f7f7;
   }
   .note, .note * {
     background-color: #f4f4f4;
@@ -240,6 +265,9 @@ margin: 0 auto;
   * {
     color: white;
     background-color:  #212121;
+  }
+  .box, .box * {
+    background-color: #171717;
   }
   .note, .note * {
     background-color: #3D3D3D;

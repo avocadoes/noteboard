@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaSignInAlt } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
@@ -55,11 +55,12 @@ function Login() {
         <div>
             <section className='heading'>
                 <h1>
-                    <FaSignInAlt /> Login
+                    <FaSignInAlt /> NoteBoard
                 </h1>
-                <p>Login and start taking notes</p>
             </section>
 
+            <div className='box'>
+            <p>Login to your account</p>
             <section className='form'>
                 <form onSubmit={ onSubmit }>
                     <div className='form-group'>
@@ -84,6 +85,9 @@ function Login() {
                             onChange={ onChange }
                         />
                     </div>
+                    <div className='link'>
+                        Don't have an account? Register <Link to='/register'>here</Link>.
+                        </div>
                     <div className='form-group'>
                         <button type='submit' className='btn btn-block'>
                             Submit
@@ -91,6 +95,7 @@ function Login() {
                     </div>
                 </form>
             </section>
+            </div>
         </div>
     )
 }

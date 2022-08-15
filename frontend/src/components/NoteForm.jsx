@@ -14,7 +14,7 @@ function NoteForm() {
         setText('')
     }
     return (
-        <section className='form'>
+        <section className='noteform'>
             <form className='input' onSubmit={onSubmit}>
                 <div className='form-group'>
                     <textarea 
